@@ -19,7 +19,7 @@ terraform {
   }
 }
 
-resource "null_resource" "test_provisioner" {
+resource "null_resource" "local_connect" {
   connection {
     type     = "ssh"
     host     = var.host
