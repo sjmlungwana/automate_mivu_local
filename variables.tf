@@ -27,3 +27,24 @@ variable "grafana" {
   description = "Do you want to install Grafana: "
   type        = string
 }
+
+variable "salt-master" {
+  description = "Do you want to install Salt Master: "
+  type        = string
+}
+
+
+variable "salt-minion" {
+  description = "Do you want to install Salt Minion: "
+  type        = string
+}
+
+variable "openvpn" {
+  description = "Do you want to install OpenVPN: "
+  type        = string
+}
+
+variable "mimir" {
+  description = "Do you want to install Mimir: "
+  type        = string
+}

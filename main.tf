@@ -36,10 +36,16 @@ resource "null_resource" "local_connect" {
       "CHRONOGRAF=${var.chronograf}",
       "INFLUX=${var.influx}",
       "GRAFANA=${var.grafana}",
+      "SALTMASTER=${var.salt-master}",
+      "SALTMINION=${var.salt-minion}",
+      "OPENVPN=${var.openvpn}",
+      "MIMIR=${var.mimir}",
       "chmod 755 /home/${var.user}/script.sh",
       "chmod 755 /home/${var.user}/grafana.sh",
       "chmod 755 /home/${var.user}/influxdb.sh",
       "chmod 755 /home/${var.user}/chronograf.sh",
+      "chmod 755 /home/${var.user}/salt-master.sh",
+      "chmod 755 /home/${var.user}/salt-minion.sh",
       "sh /home/${var.user}/script.sh",
     ]
   }
