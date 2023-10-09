@@ -4,4 +4,4 @@
 
 sudo apt update
 
-sudo apt install openvpn
+sudo apt install openvpn -y
