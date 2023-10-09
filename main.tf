@@ -28,7 +28,7 @@ resource "null_resource" "local_connect" {
   }
 
   provisioner "local-exec" {
-    command = "scp script.sh chronograf_1.10.1_amd64.deb grafana_9.5.3_amd64.deb influxdb_1.8.10_amd64.deb grafana.sh influxdb.sh chronograf.sh ${var.user}@${var.host}:/home/${var.user}"
+    command = "scp script.sh chronograf_1.10.1_amd64.deb grafana_9.5.3_amd64.deb influxdb_1.8.10_amd64.deb grafana.sh influxdb.sh chronograf.sh mimir.sh openvpn.sh salt-master.sh salt-minion.sh mimir-2.10.0_amd64.deb ${var.user}@${var.host}:/home/${var.user}"
   }
 
   provisioner "remote-exec" {
@@ -46,6 +46,7 @@ resource "null_resource" "local_connect" {
       "chmod 755 /home/${var.user}/chronograf.sh",
       "chmod 755 /home/${var.user}/salt-master.sh",
       "chmod 755 /home/${var.user}/salt-minion.sh",
+      "chmod 755 /home/${var.user}/openvpn.sh",
       "sh /home/${var.user}/script.sh",
     ]
   }
