@@ -11,3 +11,15 @@ fi
 if [ $GRAFANA=="yes" ]; then
     sudo sh grafana.sh
 fi
+if [ $SALTMASTER=="yes" ]; then
+    sudo sh salt-master.sh
+fi
+if [ $SALTMINION=="yes" ]; then
+    sudo sh salt-minion.sh
+fi
+if [ $OPENVPN=="yes" ]; then
+    sudo sh openvpn.sh
+fi
+if [ $MIMIR=="yes" ]; then
+    sudo sh mimir.sh
+fi

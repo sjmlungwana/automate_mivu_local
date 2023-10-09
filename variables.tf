@@ -1,6 +1,7 @@
 variable "host_password" {
   description = "Enter your host password: "
   type        = string
+  sensitive = true
 }
 
 variable "host" {
