@@ -47,6 +47,7 @@ resource "null_resource" "local_connect" {
       "chmod 755 /home/${var.user}/salt-master.sh",
       "chmod 755 /home/${var.user}/salt-minion.sh",
       "chmod 755 /home/${var.user}/openvpn.sh",
+      "chmod 755 /home/${var.user}/mimir.sh",
       "sh /home/${var.user}/script.sh",
     ]
   }
