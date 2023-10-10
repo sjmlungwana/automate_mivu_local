@@ -2,7 +2,11 @@
 
 # This script is for installing salt-master, it will use the internet to download dependencies
 
-sudo apt --fix-broken install
+sudo apt --fix-broken install -y
+
+sudo apt update -y
+
+sudo apt upgrade -y
 
 sudo curl -fsSL -o /usr/share/keyrings/salt-archive-keyring.gpg https://repo.saltproject.io/py3/debian/11/amd64/latest/salt-archive-keyring.gpg
 

@@ -2,6 +2,10 @@
 
 # This script is for installing grafana 9.5.3
 
+sudo apt update -y
+
+sudo apt upgrade -y
+
 sudo apt-get install -y adduser libfontconfig1
 
 sudo dpkg -i grafana_9.5.3_amd64.deb
